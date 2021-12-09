@@ -9,9 +9,12 @@ export const HomePage: React.FC = () => {
             <div className={s.buttonAddGradient}>
                 <button>add new gradient</button>
             </div>
+            <div className={s.infoContainer}>
+
+            </div>
         <div className={s.containerGradient}>
 
-            <ColorsGradient/>
+
             <ColorsGradient/>
             <ColorsGradient/>
             <ColorsGradient/>
