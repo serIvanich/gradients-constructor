@@ -1,8 +1,9 @@
 .app {
   width: 100vw;
-  height: 70vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
+  background-color: beige;
 }
 
 button {
