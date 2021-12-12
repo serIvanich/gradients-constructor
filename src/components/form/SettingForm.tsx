@@ -5,6 +5,7 @@ import s from './SettingForm.module.scss'
 export const SettingForm: React.FC<FormPropsType> = ({changeCallback, values}) => {
 
 
+
     const formik = useFormik({
         initialValues: {
             color1: '',
@@ -37,14 +38,14 @@ export const SettingForm: React.FC<FormPropsType> = ({changeCallback, values}) =
         <form className={s.formBox} onSubmit={formik.handleSubmit}>
             <label htmlFor="color1" className={s.labelTitle}>enter your color for begin gradient</label>
             <input
-                // defaultValue={"#bbb"}
+                placeholder={values?.color1}
                 {...formik.getFieldProps('color1')}  />
             <div style={{'color': 'red', 'height': '10px'}}>
                 {formik.touched.color1 && formik.errors.color1 && formik.errors.color1}
             </div>
             <label htmlFor="color1" className={s.labelTitle}>enter your color for end gradient</label>
             <input
-                // defaultValue={"#eee"}
+                placeholder={values?.color2}
                 {...formik.getFieldProps('color2')}  />
             <div style={{'color': 'red', 'height': '10px'}}>
                 {formik.touched.color2 && formik.errors.color2 && formik.errors.color2}
@@ -58,7 +59,7 @@ export const SettingForm: React.FC<FormPropsType> = ({changeCallback, values}) =
 
 
 type FormPropsType = {
-    values?: FormValuesType
+    values?: {color1?: string, color2?: string}
     changeCallback: (values: FormValuesType) => void
 }
 
