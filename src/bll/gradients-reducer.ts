@@ -28,6 +28,10 @@ const slice = createSlice({
         addNewGradient(state, action: PayloadAction<{ gradient: GradientType }>) {
             state.push(action.payload.gradient)
         },
+        deleteGradient(state, action: PayloadAction<{ id: string }>) {
+           const index = state.findIndex(i => i.id === action.payload.id )
+            state.splice(index, 1)
+        }
     },
 
 
@@ -35,7 +39,7 @@ const slice = createSlice({
 
 export const gradientsReducer = slice.reducer
 
-export const {addNewGradient} = slice.actions
+export const {addNewGradient, deleteGradient} = slice.actions
 
 
 

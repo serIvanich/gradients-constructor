@@ -1,4 +1,4 @@
-import {addNewGradient, gradientsReducer, GradientType} from "./gradients-reducer";
+import {addNewGradient, deleteGradient, gradientsReducer, GradientType} from "./gradients-reducer";
 
 
 let startState: Array<GradientType>
@@ -35,5 +35,15 @@ test('correct values should be added to correct array', () => {
     expect(endState.length).toBe(4);
     expect(endState[5]).toBeUndefined();
     expect(endState[3].color1).toBe('#fff');
+
+})
+test('gradient should be delete from state', () => {
+    const id = '2'
+
+    const endState = gradientsReducer(startState, deleteGradient({id}))
+
+    expect(endState.length).toBe(2);
+    expect(endState[5]).toBeUndefined();
+    expect(endState[1].id).toBe('3');
 
 })
