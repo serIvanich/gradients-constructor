@@ -38,9 +38,6 @@ export const gradientsReducer = slice.reducer
 export const {addNewGradient} = slice.actions
 
 
-function setId(): string {
-    return uuidv4()
-}
 
 export type GradientType = {
     id: string
