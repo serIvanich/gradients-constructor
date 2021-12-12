@@ -1,6 +1,7 @@
 import React from "react";
 import s from './ColorsGradient.module.scss'
 import {GradientType} from "../../../bll/gradients-reducer";
+import {Link} from "react-router-dom";
 
 export const ColorsGradient: React.FC<ColorsGradientPropsType> = ({gradient}) => {
 
@@ -21,7 +22,7 @@ export const ColorsGradient: React.FC<ColorsGradientPropsType> = ({gradient}) =>
                 <div style={{color: color2}}>{color1}</div>
                 <div className={s.buttonBlock}>
                     <button style={{backgroundColor: color2}}>delete</button>
-                    <button style={{backgroundColor: color1}}>edit</button>
+                    <button style={{backgroundColor: color1}}><Link to={`edit/:${gradient.id}`}>edit</Link></button>
                 </div>
                 <div style={{color: color1}}>{color2}</div>
 

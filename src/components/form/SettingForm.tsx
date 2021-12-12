@@ -37,14 +37,14 @@ export const SettingForm: React.FC<FormPropsType> = ({changeCallback, values}) =
         <form className={s.formBox} onSubmit={formik.handleSubmit}>
             <label htmlFor="color1" className={s.labelTitle}>enter your color for begin gradient</label>
             <input
-                defaultValue={"#bbb"}
+                // defaultValue={"#bbb"}
                 {...formik.getFieldProps('color1')}  />
             <div style={{'color': 'red', 'height': '10px'}}>
                 {formik.touched.color1 && formik.errors.color1 && formik.errors.color1}
             </div>
             <label htmlFor="color1" className={s.labelTitle}>enter your color for end gradient</label>
             <input
-                defaultValue={"#eee"}
+                // defaultValue={"#eee"}
                 {...formik.getFieldProps('color2')}  />
             <div style={{'color': 'red', 'height': '10px'}}>
                 {formik.touched.color2 && formik.errors.color2 && formik.errors.color2}

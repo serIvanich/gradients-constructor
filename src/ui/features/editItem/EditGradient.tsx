@@ -1,6 +1,6 @@
 import React from "react";
 import {FormValuesType, SettingForm} from "../../../components/form/SettingForm";
-import s from "../newItem/NewGradient.module.scss";
+import s from "./EditGradient.module.scss";
 
 export const EditGradient: React.FC = () => {
 
@@ -9,7 +9,7 @@ export const EditGradient: React.FC = () => {
         console.log(values)
 
     }
-
+debugger
     return (
         <div className={s.containerApp}>
 
