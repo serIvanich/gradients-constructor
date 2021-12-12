@@ -1,11 +1,10 @@
 import React from "react";
 import s from './NewGradient.module.scss'
 import {FormValuesType, SettingForm} from "../../../components/form/SettingForm";
-import {useActions} from "../../../utils/redux-utils";
 import {addNewGradient} from "../../../bll/gradients-reducer";
 import {useAppDispatch} from "../../../bll/store";
 import {v4 as uuidv4} from "uuid";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 export const NewGradient: React.FC = () => {
     const navigate = useNavigate();
@@ -24,7 +23,7 @@ export const NewGradient: React.FC = () => {
 
     return (
         <div className={s.containerApp}>
-
+            <div className={s.text}>please enter your colors of gradient or push <Link to={'/'}>this</Link> for go out</div>
             <SettingForm changeCallback={changeCallback}/>
         </div>
     )
