@@ -1,24 +1,33 @@
 import React from "react";
 import {FormValuesType, SettingForm} from "../../../components/form/SettingForm";
 import s from "./EditGradient.module.scss";
-import {useParams} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import {useSelector} from "react-redux";
-import {AppRootStateType} from "../../../bll/store";
-import {GradientType} from "../../../bll/gradients-reducer";
+import {AppRootStateType, useAppDispatch} from "../../../bll/store";
+import {changeColorsGradient, GradientType} from "../../../bll/gradients-reducer";
 
 export const EditGradient: React.FC = () => {
 
-    const {id} = useParams()
 
+    let {id} = useParams()
+    const navigate = useNavigate()
+    const dispatch = useAppDispatch()
     const gradients = useSelector<AppRootStateType, GradientType[]>(state => state.gradients)
-    const gradient = gradients.find(i => i.id === id)
-    const gradientValues = gradient?.color1 && gradient?.color2? {color1: gradient.color1, color2: gradient.color2} : {}
-    console.log(id, gradient)
+
+    let gradient: GradientType [] = gradients ? gradients.filter(i => i.id === id) : []
+    let gradientValues = {
+        color1: gradient[0].color1,
+        color2: gradient[0].color2
+    }
+
     const changeCallback = (values: FormValuesType) => {
-        gradients.forEach(i => {
-
-        })
-
+        const newGradient = {
+            id: gradient[0].id,
+            color1: values.color1,
+            color2: values.color2,
+        }
+        dispatch(changeColorsGradient({gradient: newGradient}))
+        navigate('/')
     }
 
     return (

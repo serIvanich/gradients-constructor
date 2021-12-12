@@ -31,7 +31,11 @@ const slice = createSlice({
         deleteGradient(state, action: PayloadAction<{ id: string }>) {
            const index = state.findIndex(i => i.id === action.payload.id )
             state.splice(index, 1)
-        }
+        },
+        changeColorsGradient(state, action: PayloadAction<{ gradient: GradientType }>) {
+            const index = state.findIndex(i => i.id === action.payload.gradient.id )
+            state.splice(index, 1, action.payload.gradient)
+        },
     },
 
 
@@ -39,7 +43,7 @@ const slice = createSlice({
 
 export const gradientsReducer = slice.reducer
 
-export const {addNewGradient, deleteGradient} = slice.actions
+export const {addNewGradient, deleteGradient, changeColorsGradient} = slice.actions
 
 
 

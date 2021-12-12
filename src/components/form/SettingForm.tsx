@@ -4,12 +4,17 @@ import s from './SettingForm.module.scss'
 
 export const SettingForm: React.FC<FormPropsType> = ({changeCallback, values}) => {
 
-
+    let color1 = ''
+    let color2 = ''
+    if (values) {
+        color1 = values.color1
+        color2 = values.color2
+    }
 
     const formik = useFormik({
         initialValues: {
-            color1: '',
-            color2: '',
+            color1: color1,
+            color2: color2,
         },
         validate: (values) => {
             const errors: FormikErrorType = {};
@@ -59,7 +64,7 @@ export const SettingForm: React.FC<FormPropsType> = ({changeCallback, values}) =
 
 
 type FormPropsType = {
-    values?: {color1?: string, color2?: string}
+    values?: { color1: string, color2: string }
     changeCallback: (values: FormValuesType) => void
 }
 
