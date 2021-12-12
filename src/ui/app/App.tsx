@@ -1,6 +1,6 @@
 import React from 'react';
 import {Routes, Route} from 'react-router-dom';
-import s from './App.module.css';
+import s from './App.module.scss';
 import {HomePage} from "../features/home/HomePage";
 import {NewGradient} from "../features/newItem/NewGradient";
 import {EditGradient} from "../features/editItem/EditGradient";

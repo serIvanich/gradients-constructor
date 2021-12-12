@@ -1,12 +1,12 @@
 import React from "react";
-import s from './ColorsGradient.module.css'
+import s from './ColorsGradient.module.scss'
 import {GradientType} from "../../../bll/gradients-reducer";
 
 export const ColorsGradient: React.FC<ColorsGradientPropsType> = ({gradient}) => {
 
     // const color1 = '#E040FB'
     // const color2 = '#00BCD4'
-const {color1, color2} = gradient
+    const {color1, color2} = gradient
 
     const gradientStyle = {
         background: `linear-gradient(to right, ${color1}, ${color2})`,

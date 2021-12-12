@@ -9,14 +9,14 @@
     justify-content: space-between;
     align-items: center;
     border-radius: 10px;
+
+    .buttonBlock {
+        width: 120px;
+        position: absolute;
+        bottom: 5px;
+        left: 133px;
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
-.buttonBlock {
-    width: 120px;
-    position: absolute;
-    bottom: 5px;
-    left: 133px;
-    display: flex;
-    justify-content: space-between;
-
-}

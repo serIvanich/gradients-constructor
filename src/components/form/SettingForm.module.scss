@@ -1,0 +1,19 @@
+
+
+.formBox {
+  width: 400px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  input {
+    height: 30px;
+    border-radius: 5px;
+  }
+
+  button {
+    width: 100px;
+  }
+}
