@@ -1,0 +1,16 @@
+@import './variables';
+
+@mixin setContainers() {
+  width: 75%;
+  min-height: 100%;
+  background-color: $bgColor;
+
+}
+
+@mixin setDisplay($justifyContent, $flexDirection) {
+  position: relative;
+  display: flex;
+  flex-direction: $flexDirection;
+  justify-content: $justifyContent;
+  align-items: center;
+}

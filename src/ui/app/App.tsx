@@ -1,5 +1,5 @@
 import React from 'react';
-import {Routes, Route} from 'react-router-dom';
+import {Navigate, Route, Routes} from 'react-router-dom';
 import s from './App.module.scss';
 import {HomePage} from "../features/home/HomePage";
 import {NewGradient} from "../features/newItem/NewGradient";
@@ -13,6 +13,7 @@ function App() {
                 <Route path={'/'} element={<HomePage/>}/>
                 <Route path={'/new'} element={<NewGradient/>}/>
                 <Route path={'/edit/:id'} element={<EditGradient/>}/>
+                <Route path="*" element={<Navigate replace to="/"/>}/>
             </Routes>
 
         </div>

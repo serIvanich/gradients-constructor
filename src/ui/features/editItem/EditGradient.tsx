@@ -1,13 +1,12 @@
 import React from "react";
-import {FormValuesType, SettingForm} from "../../../components/form/SettingForm";
+import {FormValuesType, SettingForm} from "../../form/SettingForm";
 import s from "./EditGradient.module.scss";
 import {Link, useNavigate, useParams} from "react-router-dom";
 import {useSelector} from "react-redux";
 import {AppRootStateType, useAppDispatch} from "../../../bll/store";
 import {changeColorsGradient, GradientType} from "../../../bll/gradients-reducer";
 
-export const EditGradient: React.FC = () => {
-
+export const EditGradient: React.FC = React.memo(() => {
 
     let {id} = useParams()
     const navigate = useNavigate()
@@ -35,9 +34,9 @@ export const EditGradient: React.FC = () => {
 
     return (
         <div className={s.containerEdit}>
-            <div className={s.text}>please change colors of gradient or push <Link to={'/'}>this</Link> </div>
+            <div className={s.text}>please change colors of gradient or push <Link to={'/'}>this</Link> for go out</div>
             <SettingForm changeCallback={changeCallback} values={gradientValues}/>
         </div>
     )
-}
+})
 

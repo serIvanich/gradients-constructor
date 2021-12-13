@@ -1,16 +1,14 @@
+@import "../../../common/styles/sass/variables";
+@import "../../../common/styles/sass/mixins";
 
 .gradientContainer {
     width: 350px;
     height: 70px;
     margin-bottom: 50px;
     padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include setDisplay(space-between, row);
     border-radius: 10px;
     font-weight: bold;
-
-
     @media screen and (max-width: 500px) {
         width: 250px;
     }

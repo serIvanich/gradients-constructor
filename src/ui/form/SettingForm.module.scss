@@ -1,0 +1,20 @@
+@import '../../common/styles/sass/variables';
+@import '../../common/styles/sass/mixins';
+
+.formBox {
+  width: 300px;
+  height: 500px;
+  @include setDisplay(space-around, column);
+
+  input {
+    height: 30px;
+    border-radius: 5px;
+  }
+
+  button {
+    width: 100px;
+    &:hover {
+      background-color: $generalColor;
+    }
+  }
+}

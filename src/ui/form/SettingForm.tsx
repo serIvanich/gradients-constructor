@@ -1,8 +1,8 @@
-import {FormikHelpers, useFormik} from "formik";
+import {useFormik} from "formik";
 import React from "react";
 import s from './SettingForm.module.scss'
 
-export const SettingForm: React.FC<FormPropsType> = ({changeCallback, values}) => {
+export const SettingForm: React.FC<FormPropsType> = React.memo(({changeCallback, values}) => {
 
     let color1 = ''
     let color2 = ''
@@ -20,22 +20,22 @@ export const SettingForm: React.FC<FormPropsType> = ({changeCallback, values}) =
             const errors: FormikErrorType = {};
             if (!values.color1) {
                 errors.color1 = 'Required';
-            } else if (!/^#[A-F0-9._%+-]{2,4}$/i.test(values.color1)) {
+            } else if (!/(^#[A-F0-9]{3}$)|(^#[A-F0-9]{6}$)/i.test(values.color1)) {
                 errors.color1 = 'Invalid color';
             }
             if (!values.color2) {
                 errors.color2 = 'Required';
-            } else if (!/^#[A-F0-9._%+-]{2,4}$/i.test(values.color2)) {
+            } else if (!/(^#[A-F0-9]{3}$)|(^#[A-F0-9]{6}$)/i.test(values.color2)) {
                 errors.color2 = 'Invalid color';
             }
 
             return errors;
         },
 
-        onSubmit: (values: FormValuesType, formikHelpers: FormikHelpers<FormValuesType>) => {
+        onSubmit: (values: FormValuesType) => {
             changeCallback(values)
 
-            // formik.resetForm()
+            formik.resetForm()
         },
     });
 
@@ -60,7 +60,7 @@ export const SettingForm: React.FC<FormPropsType> = ({changeCallback, values}) =
             <button type="submit">add gradient</button>
         </form>
     )
-}
+})
 
 
 type FormPropsType = {

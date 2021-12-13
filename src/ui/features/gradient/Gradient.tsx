@@ -1,12 +1,23 @@
 import React from "react";
-import s from './ColorsGradient.module.scss'
+import s from './Gradient.module.scss'
 import {GradientType} from "../../../bll/gradients-reducer";
 import {useNavigate} from "react-router-dom";
 
-export const ColorsGradient: React.FC<ColorsGradientPropsType> = ({gradient, removeGradient}) => {
+export const Gradient: React.FC<GradientPropsType> = ({gradient, removeGradient}) => {
+
     const navigate = useNavigate()
 
     const {color1, color2} = gradient
+    const styleButton1 = {
+        backgroundColor: color2,
+        color: color1,
+        borderColor: color1,
+    }
+    const styleButton2 = {
+        backgroundColor: color1,
+        color: color2,
+        borderColor: color2,
+    }
 
     const gradientStyle = {
         background: `linear-gradient(to right, ${color1}, ${color2})`,
@@ -20,17 +31,13 @@ export const ColorsGradient: React.FC<ColorsGradientPropsType> = ({gradient, rem
 
     return (
         <div>
-
             <div className={s.gradientContainer} style={gradientStyle}>
-
-
                 <div style={{color: color2}}>{color1}</div>
                 <div className={s.buttonBlock}>
-                    <button style={{backgroundColor: color2}} onClick={clickDelete}>delete</button>
-                    <button style={{backgroundColor: color1}} onClick={clickEdit}>edit</button>
+                    <button style={styleButton1} onClick={clickDelete}>delete</button>
+                    <button style={styleButton2} onClick={clickEdit}>edit</button>
                 </div>
                 <div style={{color: color1}}>{color2}</div>
-
             </div>
         </div>
     )
@@ -38,7 +45,7 @@ export const ColorsGradient: React.FC<ColorsGradientPropsType> = ({gradient, rem
 
 //types
 
-type ColorsGradientPropsType = {
+type GradientPropsType = {
     gradient: GradientType
     removeGradient: (id: string) => void
 }
