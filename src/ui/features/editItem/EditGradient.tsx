@@ -34,8 +34,8 @@ export const EditGradient: React.FC = () => {
     }
 
     return (
-        <div className={s.containerApp}>
-            <div className={s.text}>please change colors of gradient or enter <Link to={'/'}>this</Link> for go out</div>
+        <div className={s.containerEdit}>
+            <div className={s.text}>please change colors of gradient or push <Link to={'/'}>this</Link> </div>
             <SettingForm changeCallback={changeCallback} values={gradientValues}/>
         </div>
     )

@@ -22,7 +22,7 @@ export const NewGradient: React.FC = () => {
     }
 
     return (
-        <div className={s.containerApp}>
+        <div className={s.containerNew}>
             <div className={s.text}>please enter your colors of gradient or push <Link to={'/'}>this</Link> for go out</div>
             <SettingForm changeCallback={changeCallback}/>
         </div>
