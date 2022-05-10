@@ -2,6 +2,7 @@ import React from "react";
 import s from './Gradient.module.scss'
 import {GradientType} from "../../../bll/gradients-reducer";
 import {useNavigate} from "react-router-dom";
+import styled, { ThemeProvider } from 'styled-components';
 
 export const Gradient: React.FC<GradientPropsType> = ({gradient, removeGradient}) => {
 
@@ -28,6 +29,12 @@ export const Gradient: React.FC<GradientPropsType> = ({gradient, removeGradient}
     const clickEdit = () => {
         navigate(`edit/${gradient.id}`)
     }
+
+    // const TextColor = styled.div`
+    //     backgroundColor: invert(${color2}),
+    //     color: invert(${color1}),
+    //     borderColor: ${color1},
+    // `
 
     return (
         <div>

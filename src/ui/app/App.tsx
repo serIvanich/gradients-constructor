@@ -8,14 +8,14 @@ import {EditGradient} from "../features/editItem/EditGradient";
 function App() {
     return (
         <div className={s.app}>
-
-            <Routes>
-                <Route path={'/'} element={<HomePage/>}/>
-                <Route path={'/new'} element={<NewGradient/>}/>
-                <Route path={'/edit/:id'} element={<EditGradient/>}/>
-                <Route path="*" element={<Navigate replace to="/"/>}/>
-            </Routes>
-
+            
+                <Routes>
+                    <Route path={'/'} element={<HomePage/>}/>
+                    <Route path={'/new'} element={<NewGradient/>}/>
+                    <Route path={'/edit/:id'} element={<EditGradient/>}/>
+                    <Route path="*" element={<Navigate replace to="/"/>}/>
+                </Routes>
+           
         </div>
     );
 }
