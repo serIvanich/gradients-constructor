@@ -34,7 +34,7 @@ export const EditGradient: React.FC = React.memo(() => {
 
     return (
         <div className={s.containerEdit}>
-            <div className={s.text}>please change colors of gradient or push <Link to={'/'}>this</Link> for go out</div>
+            <div className={s.text}>please change colors of gradient or push <Link to={'/'}><b>this</b></Link> for go out</div>
             <SettingForm changeCallback={changeCallback} values={gradientValues}/>
         </div>
     )

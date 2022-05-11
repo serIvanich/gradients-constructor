@@ -2,17 +2,21 @@
 @import '../../common/styles/sass/mixins';
 
 .formBox {
-  width: 300px;
+  max-width: 700px;
   height: 500px;
   @include setDisplay(space-around, column);
 
   input {
-    height: 30px;
+    width: 200px;
+    height: 50px;
     border-radius: 5px;
+    font-size: 1.3em;
   }
 
   button {
-    width: 100px;
+    
+    @include setButtons(150px, 50px);
+    font-size: 1.2em;
     &:hover {
       background-color: $generalColor;
     }

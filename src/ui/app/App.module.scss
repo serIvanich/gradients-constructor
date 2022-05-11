@@ -1,17 +1,12 @@
 .app {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   background-color: beige;
 
 }
 
-button {
-  min-height: 29px;
-  min-width: 53px;
-  border-radius: 7px;
-}
 
 
 

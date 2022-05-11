@@ -3,21 +3,40 @@
 
 .gradientContainer {
     width: 350px;
-    height: 85px;
-    margin-bottom: 50px;
+    height: 105px;
+    margin: 35px 20px;
     padding: 10px;
     @include setDisplay(space-between, row);
     border-radius: 10px;
-    font-weight: bold;
+    
     @media screen and (max-width: 500px) {
         width: 250px;
+        margin: 35px 0;
+        font-size: 1.1em;
     }
     .buttonBlock {
-        width: 120px;
-        position: relative;
-        top: 25px;
+        width: 150px;
+        position: absolute;
+        bottom: -35%;
+        
         display: flex;
         justify-content: space-between;
+        
+        button {
+            @include setButtons(70px, 35px);
+            
+            &:hover {
+                filter: invert(100%);
+            }
+        }
     }
+    span {
+
+        filter: invert(100%);
+        font-size: inherit;
+        font-weight: 600;
+    }
+    
+
 }
 

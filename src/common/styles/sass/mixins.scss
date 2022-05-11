@@ -4,7 +4,10 @@
   width: 75%;
   height: 100%;
   background-color: $bgColor;
-
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 @mixin setDisplay($justifyContent, $flexDirection) {
@@ -13,4 +16,12 @@
   flex-direction: $flexDirection;
   justify-content: $justifyContent;
   align-items: center;
+  
+}
+
+@mixin setButtons($weightButton, $heightButton, ) {
+  min-height: $heightButton;
+  min-width: $weightButton;
+  border-radius: 7px;
+  cursor: pointer;
 }

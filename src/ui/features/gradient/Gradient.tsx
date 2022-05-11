@@ -2,7 +2,7 @@ import React from "react";
 import s from './Gradient.module.scss'
 import {GradientType} from "../../../bll/gradients-reducer";
 import {useNavigate} from "react-router-dom";
-import styled, { ThemeProvider } from 'styled-components';
+// import styled, { ThemeProvider } from 'styled-components';
 
 export const Gradient: React.FC<GradientPropsType> = ({gradient, removeGradient}) => {
 
@@ -11,12 +11,12 @@ export const Gradient: React.FC<GradientPropsType> = ({gradient, removeGradient}
     const {color1, color2} = gradient
     const styleButton1 = {
         backgroundColor: color2,
-        color: color1,
+        color: color2,
         borderColor: color1,
     }
     const styleButton2 = {
         backgroundColor: color1,
-        color: color2,
+        color: color1,
         borderColor: color2,
     }
 
@@ -39,12 +39,12 @@ export const Gradient: React.FC<GradientPropsType> = ({gradient, removeGradient}
     return (
         <div>
             <div className={s.gradientContainer} style={gradientStyle}>
-                <div style={{color: color2}}>{color1}</div>
+                <div style={{color: color1}}><span>{color1}</span></div>
                 <div className={s.buttonBlock}>
-                    <button style={styleButton1} onClick={clickDelete}>delete</button>
-                    <button style={styleButton2} onClick={clickEdit}>edit</button>
+                    <button style={styleButton1} onClick={clickDelete}><span>delete</span></button>
+                    <button style={styleButton2} onClick={clickEdit}><span>edit</span></button>
                 </div>
-                <div style={{color: color1}}>{color2}</div>
+                <div style={{color: color2}}><span>{color2}</span></div>
             </div>
         </div>
     )

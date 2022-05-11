@@ -4,7 +4,7 @@
 .containerHome {
   @include setContainers();
   @media screen and (max-width: 700px) {
-    width: 95%;
+    width: 100%;
   }
 
   .buttonAddGradient {
@@ -17,11 +17,15 @@
     display: flex;
     justify-content: center;
 
+    @media screen and (max-width: 500px) {
+      width: 200px;
+
+    }
+
     & a {
       width: 100%;
       text-align: center;
       text-decoration-line: none;
-      font-size: 25px;
       color: $textColor;
 
     }
@@ -35,8 +39,8 @@
     
     
     margin-bottom: 50px;
-    padding: 10px 0;
-    font-size: 25px;
+    padding: 15px 0;
+    
     text-align: center;
     color: $textColor;
     background-color: $generalColor;
@@ -44,10 +48,9 @@
   }
 
   .containerGradient {
-    
-    padding: 10px 0;
+   
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: wrap;
     justify-content: space-around;
     align-content: flex-start;
   }
