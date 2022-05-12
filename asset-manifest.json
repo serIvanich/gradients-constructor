@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/test_vertage_lab/static/css/main.77ad32ce.chunk.css",
-    "main.js": "/test_vertage_lab/static/js/main.5d721792.chunk.js",
-    "main.js.map": "/test_vertage_lab/static/js/main.5d721792.chunk.js.map",
+    "main.css": "/test_vertage_lab/static/css/main.6c8d22fd.chunk.css",
+    "main.js": "/test_vertage_lab/static/js/main.48601a84.chunk.js",
+    "main.js.map": "/test_vertage_lab/static/js/main.48601a84.chunk.js.map",
     "runtime-main.js": "/test_vertage_lab/static/js/runtime-main.3f06d23f.js",
     "runtime-main.js.map": "/test_vertage_lab/static/js/runtime-main.3f06d23f.js.map",
     "static/js/2.df4929a0.chunk.js": "/test_vertage_lab/static/js/2.df4929a0.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.22ad333b.chunk.js": "/test_vertage_lab/static/js/3.22ad333b.chunk.js",
     "static/js/3.22ad333b.chunk.js.map": "/test_vertage_lab/static/js/3.22ad333b.chunk.js.map",
     "index.html": "/test_vertage_lab/index.html",
-    "static/css/main.77ad32ce.chunk.css.map": "/test_vertage_lab/static/css/main.77ad32ce.chunk.css.map",
+    "static/css/main.6c8d22fd.chunk.css.map": "/test_vertage_lab/static/css/main.6c8d22fd.chunk.css.map",
     "static/js/2.df4929a0.chunk.js.LICENSE.txt": "/test_vertage_lab/static/js/2.df4929a0.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3f06d23f.js",
     "static/js/2.df4929a0.chunk.js",
-    "static/css/main.77ad32ce.chunk.css",
-    "static/js/main.5d721792.chunk.js"
+    "static/css/main.6c8d22fd.chunk.css",
+    "static/js/main.48601a84.chunk.js"
   ]
 }
