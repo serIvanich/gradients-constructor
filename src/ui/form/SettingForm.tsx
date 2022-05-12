@@ -57,7 +57,7 @@ export const SettingForm: React.FC<FormPropsType> = React.memo(({changeCallback,
             </div>
 
 
-            <button type="submit">add gradient</button>
+            <button type="submit">save gradient</button>
         </form>
     )
 })

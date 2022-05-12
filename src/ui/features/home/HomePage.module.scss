@@ -14,8 +14,9 @@
     padding: 10px;
     border: 3px solid $textColor;
     border-radius: 10px;
-    display: flex;
-    justify-content: center;
+
+    @include flexDisplay(row, center);
+    
 
     @media screen and (max-width: 500px) {
       width: 200px;
@@ -37,10 +38,8 @@
 
   .infoContainer {
     
-    
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     padding: 15px 0;
-    
     text-align: center;
     color: $textColor;
     background-color: $generalColor;
@@ -48,10 +47,10 @@
   }
 
   .containerGradient {
-   
-    display: flex;
+
+    @include flexDisplay(row, space-around);
+  
     flex-flow: wrap;
-    justify-content: space-around;
     align-content: flex-start;
   }
 

@@ -6,23 +6,27 @@
     height: 105px;
     margin: 35px 20px;
     padding: 10px;
-    @include setDisplay(space-between, row);
+    @include setDisplay(row, space-between);
     border-radius: 10px;
     
     @media screen and (max-width: 500px) {
         width: 250px;
-        margin: 35px 0;
+        margin: 40px 0;
         font-size: 1.1em;
     }
     .buttonBlock {
         width: 150px;
         position: absolute;
+        left: 50%;
         bottom: -35%;
+        transform: translate(-50%, -50%);
         
-        display: flex;
-        justify-content: space-between;
+
+        @include flexDisplay(row, space-between);
+        
         
         button {
+            
             @include setButtons(70px, 35px);
             
             &:hover {

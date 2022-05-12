@@ -1,20 +1,25 @@
 @import './variables';
 
-@mixin setContainers() {
-  width: 75%;
-  height: 100%;
-  background-color: $bgColor;
-  font-size: 1.5em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-@mixin setDisplay($justifyContent, $flexDirection) {
-  position: relative;
+@mixin flexDisplay($flexDirection, $justifyContent) {
   display: flex;
   flex-direction: $flexDirection;
   justify-content: $justifyContent;
+}
+
+@mixin setContainers() {
+  width: 75%;
+  background-color: $bgColor;
+  font-size: 1.5em;
+
+  @include flexDisplay(column, flex-start);
+  
+  
+}
+
+@mixin setDisplay($flexDirection, $justifyContent) {
+  position: relative;
+
+  @include flexDisplay($flexDirection, $justifyContent);
   align-items: center;
   
 }
@@ -24,4 +29,14 @@
   min-width: $weightButton;
   border-radius: 7px;
   cursor: pointer;
+}
+
+@mixin setHeaderText() {
+  width: 100%;
+  position: relative;
+  top: 0;
+  margin-bottom: 40px;
+  padding: 15px 10px;
+  background-color: $generalColor;
+  text-align: center;
 }

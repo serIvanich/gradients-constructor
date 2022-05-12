@@ -2,9 +2,14 @@
 @import '../../common/styles/sass/mixins';
 
 .formBox {
-  max-width: 700px;
-  height: 500px;
-  @include setDisplay(space-around, column);
+  width: 700px;
+  height: 600px;
+  @include setDisplay(column, space-between);
+
+  .labelTitle {
+    padding: 10px;
+    text-align: center;
+  }
 
   input {
     width: 200px;
