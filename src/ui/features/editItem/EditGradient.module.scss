@@ -6,7 +6,7 @@
   max-height: 100vh;
   position: relative;
   align-items: center;
- padding-bottom: 10px;
+  padding-bottom: 10px;
   
   .text {
     @include setHeaderText();

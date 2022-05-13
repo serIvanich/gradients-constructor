@@ -4,19 +4,19 @@
 .formBox {
   max-width: 700px;
   height: 550px;
-  @include setBox(column, space-between);
+  @include setBox(column, start);
 
   @media screen and (max-width: 500px) {
     height: 400px;
   }
   .labelTitle {
-    padding: 10px;
+    padding: 15px;
     text-align: center;
   }
 
   .errorText {
     width: 100%;
-    height: 100%;
+    height: 50px;
     padding: 5px 0;
     text-align: center;
     color: red;
@@ -32,6 +32,7 @@
   button {
     
     @include setButtons(150px, 50px);
+    margin: 10px 0;
     font-size: 1.2em;
     &:hover {
       background-color: $generalColor;
