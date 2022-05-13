@@ -18,14 +18,15 @@ export const SettingForm: React.FC<FormPropsType> = React.memo(({changeCallback,
         },
         validate: (values) => {
             const errors: FormikErrorType = {};
+            const regExp = /(^#[A-F0-8]{3}$)|(^#[A-F0-8]{6}$)/i
             if (!values.color1) {
                 errors.color1 = 'Required';
-            } else if (!/(^#[A-F0-9]{3}$)|(^#[A-F0-9]{6}$)/i.test(values.color1)) {
+            } else if (!regExp.test(values.color1)) {
                 errors.color1 = 'Invalid color';
             }
             if (!values.color2) {
                 errors.color2 = 'Required';
-            } else if (!/(^#[A-F0-9]{3}$)|(^#[A-F0-9]{6}$)/i.test(values.color2)) {
+            } else if (!regExp.test(values.color2)) {
                 errors.color2 = 'Invalid color';
             }
 

@@ -1,6 +1,5 @@
 import {
-    addNewGradient,
-    changeColorsGradient,
+    setColorsGradient,
     deleteGradient,
     gradientsReducer,
     GradientType
@@ -13,18 +12,18 @@ beforeEach(() => {
     startState = [
         {
             id: '1',
-            color1: '#e4a4a4',
-            color2: '#f1aa11',
+            color1: '#e4a',
+            color2: '#f1a',
         },
         {
             id: '2',
-            color1: '#aa55cc',
-            color2: '#11f1f1',
+            color1: '#aa5',
+            color2: '#11f',
         },
         {
             id: '3',
-            color1: '#77a7aa',
-            color2: '#b1b1b1',
+            color1: '#77a',
+            color2: '#b1b',
         },
     ]
 })
@@ -36,7 +35,7 @@ test('correct values should be added to correct array', () => {
         color2: '#111',
     }
 
-    const endState = gradientsReducer(startState, addNewGradient({gradient: newGradient}))
+    const endState = gradientsReducer(startState, setColorsGradient({gradient:newGradient}))
 
     expect(endState.length).toBe(4);
     expect(endState[5]).toBeUndefined();
@@ -56,17 +55,17 @@ test('gradient should be delete from state', () => {
 })
 
 test('gradient should be changed at state', () => {
-    const id = '3'
+    
     const newGradient = {
-        id: '11',
+        id: '1',
         color1: '#111',
         color2: '#fff',
     }
 
-    const endState = gradientsReducer(startState, changeColorsGradient({gradient:newGradient}))
+    const endState = gradientsReducer(startState, setColorsGradient({gradient:newGradient}))
 
     expect(endState.length).toBe(3);
     expect(endState[5]).toBeUndefined();
-    expect(endState[2].id).toBe('11');
+    expect(endState[2].id).toBe('3');
 
 })

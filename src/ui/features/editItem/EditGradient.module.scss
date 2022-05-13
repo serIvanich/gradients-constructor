@@ -3,10 +3,10 @@
 
 .containerEdit {
   @include setContainers();
-  @include setDisplay(column, flex-start);
-  @media screen and (max-width: 700px) {
-    width: 100%;
-  }
+  
+  position: relative;
+  align-items: center;
+ 
   
   .text {
     @include setHeaderText();

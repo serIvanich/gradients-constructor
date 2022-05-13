@@ -6,12 +6,13 @@
     height: 105px;
     margin: 35px 20px;
     padding: 10px;
-    @include setDisplay(row, space-between);
+    @include setBox(row, space-between);
     border-radius: 10px;
+    
     
     @media screen and (max-width: 500px) {
         width: 250px;
-        margin: 40px 0;
+        margin: 35px 0;
         font-size: 1.1em;
     }
     .buttonBlock {
@@ -21,10 +22,8 @@
         bottom: -35%;
         transform: translate(-50%, -50%);
         
-
         @include flexDisplay(row, space-between);
-        
-        
+         
         button {
             
             @include setButtons(70px, 35px);
@@ -40,7 +39,5 @@
         font-size: inherit;
         font-weight: 600;
     }
-    
-
 }
 

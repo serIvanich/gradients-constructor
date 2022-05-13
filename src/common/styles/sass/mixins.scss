@@ -13,12 +13,13 @@
 
   @include flexDisplay(column, flex-start);
   
-  
+  @media screen and (max-width: 700px) {
+    width: 100%;
+  }
 }
 
-@mixin setDisplay($flexDirection, $justifyContent) {
+@mixin setBox($flexDirection, $justifyContent) {
   position: relative;
-
   @include flexDisplay($flexDirection, $justifyContent);
   align-items: center;
   
@@ -28,6 +29,7 @@
   min-height: $heightButton;
   min-width: $weightButton;
   border-radius: 7px;
+  font-size: 0.7em;
   cursor: pointer;
 }
 
