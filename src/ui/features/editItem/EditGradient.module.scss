@@ -10,6 +10,10 @@
   
   .text {
     @include setHeaderText();
+
+    @media screen and (max-width: 500px) {
+      margin-bottom: 20px;
+    }
   }
 }
 

@@ -46,14 +46,14 @@ export const SettingForm: React.FC<FormPropsType> = React.memo(({changeCallback,
             <input
                 placeholder={values?.color1}
                 {...formik.getFieldProps('color1')}  />
-            <div style={{'color': 'red', 'height': '10px'}}>
+            <div className={s.errorText}>
                 {formik.touched.color1 && formik.errors.color1 && formik.errors.color1}
             </div>
             <label htmlFor="color1" className={s.labelTitle}>enter your color for end gradient</label>
             <input
                 placeholder={values?.color2}
                 {...formik.getFieldProps('color2')}  />
-            <div style={{'color': 'red', 'height': '10px'}}>
+            <div className={s.errorText}>
                 {formik.touched.color2 && formik.errors.color2 && formik.errors.color2}
             </div>
 
