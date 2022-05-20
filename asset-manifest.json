@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/test_vertage_lab/static/css/main.fbe45982.chunk.css",
-    "main.js": "/test_vertage_lab/static/js/main.9912a3d4.chunk.js",
-    "main.js.map": "/test_vertage_lab/static/js/main.9912a3d4.chunk.js.map",
-    "runtime-main.js": "/test_vertage_lab/static/js/runtime-main.61959130.js",
-    "runtime-main.js.map": "/test_vertage_lab/static/js/runtime-main.61959130.js.map",
-    "static/js/2.7909fd03.chunk.js": "/test_vertage_lab/static/js/2.7909fd03.chunk.js",
-    "static/js/2.7909fd03.chunk.js.map": "/test_vertage_lab/static/js/2.7909fd03.chunk.js.map",
-    "static/js/3.c8e76760.chunk.js": "/test_vertage_lab/static/js/3.c8e76760.chunk.js",
-    "static/js/3.c8e76760.chunk.js.map": "/test_vertage_lab/static/js/3.c8e76760.chunk.js.map",
-    "index.html": "/test_vertage_lab/index.html",
-    "static/css/main.fbe45982.chunk.css.map": "/test_vertage_lab/static/css/main.fbe45982.chunk.css.map",
-    "static/js/2.7909fd03.chunk.js.LICENSE.txt": "/test_vertage_lab/static/js/2.7909fd03.chunk.js.LICENSE.txt"
+    "main.css": "/gradients-constructor/static/css/main.db5b6e0b.chunk.css",
+    "main.js": "/gradients-constructor/static/js/main.784c37b3.chunk.js",
+    "main.js.map": "/gradients-constructor/static/js/main.784c37b3.chunk.js.map",
+    "runtime-main.js": "/gradients-constructor/static/js/runtime-main.0cf8ab8e.js",
+    "runtime-main.js.map": "/gradients-constructor/static/js/runtime-main.0cf8ab8e.js.map",
+    "static/js/2.87a186d4.chunk.js": "/gradients-constructor/static/js/2.87a186d4.chunk.js",
+    "static/js/2.87a186d4.chunk.js.map": "/gradients-constructor/static/js/2.87a186d4.chunk.js.map",
+    "static/js/3.74a73c75.chunk.js": "/gradients-constructor/static/js/3.74a73c75.chunk.js",
+    "static/js/3.74a73c75.chunk.js.map": "/gradients-constructor/static/js/3.74a73c75.chunk.js.map",
+    "index.html": "/gradients-constructor/index.html",
+    "static/css/main.db5b6e0b.chunk.css.map": "/gradients-constructor/static/css/main.db5b6e0b.chunk.css.map",
+    "static/js/2.87a186d4.chunk.js.LICENSE.txt": "/gradients-constructor/static/js/2.87a186d4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.61959130.js",
-    "static/js/2.7909fd03.chunk.js",
-    "static/css/main.fbe45982.chunk.css",
-    "static/js/main.9912a3d4.chunk.js"
+    "static/js/runtime-main.0cf8ab8e.js",
+    "static/js/2.87a186d4.chunk.js",
+    "static/css/main.db5b6e0b.chunk.css",
+    "static/js/main.784c37b3.chunk.js"
   ]
 }
